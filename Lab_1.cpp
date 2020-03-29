@@ -16,14 +16,14 @@ int factorial_loop(int value) {
     return output;
 }
 
-void helloworld() {
+void hello_world() {
     char input[20];
     cin >> input;
     cout << "Hello " << input << "!" << endl;
 }
 
 int main() {
-    // helloworld();
+    // hello_world();
     cout << factorial_loop(5) << endl;
     return 0;
 } 
