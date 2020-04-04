@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 int factorial_recursive(int value) {
     if (value == 0) {
@@ -18,12 +17,12 @@ int factorial_loop(int value) {
 
 void hello_world() {
     char input[20];
-    cin >> input;
-    cout << "Hello " << input << "!" << endl;
+    std::cin >> input;
+    std::cout << "Hello " << input << "!" << std::endl;
 }
 
 int main() {
     // hello_world();
-    cout << factorial_loop(5) << endl;
+    std::cout << factorial_loop(5) << std::endl;
     return 0;
 } 

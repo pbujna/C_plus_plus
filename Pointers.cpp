@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 // Int takes 4 bytes of memory
 
@@ -8,15 +7,15 @@ void show_basics() {
     int array[10];
     int *arrayLocation0 = &array[0];
     int *arrayLocation6 = &array[6];
-    cout << "Location 0 = " << arrayLocation0 << endl;
-    cout << "Location 6 = " << arrayLocation6 << endl;
+    std::cout << "Location 0 = " << arrayLocation0 << std::endl;
+    std::cout << "Location 6 = " << arrayLocation6 << std::endl;
 }
 
 // Declare and initialize an array and iterate over it showing memory locations and given values
 void iteration() {
     int array[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     for (int i = 0; i < 10; i++) {
-        cout << array + i << " = " << *(array + i) << endl;
+        std::cout << array + i << " = " << *(array + i) << std::endl;
     }
 }
 
@@ -38,11 +37,11 @@ void bubbleSort(int array[], int n) {
 }
 
 int main() {
-    int array[] = {6, 33, 5, 1};
+    int array[] = {6, 33, 5, 1, 22, 107};
     int n = sizeof(array)/sizeof(array[0]);
     bubbleSort(array, n);
     for (int i = 0; i < n; i++) {
-        cout << array[i] << endl;
+        std::cout << array[i] << std::endl;
     }
     return 0;
 }
