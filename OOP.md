@@ -16,10 +16,10 @@ Binary binary();
 
 Nowy obiekt tworzony jest zaraz po zdefiniowaniu klasy do której jest on odwoływany (w tym przypadku zarówno zmienną, jak i obiektem klasy jest *binary*).
 
-# 2. Opisz jednym zdaniem do czego służy typ optional (od C++ 17)?
+# 2. Opisz jednym zdaniem do czego służy typ optional?
 
 Klasa dekorująca wskazująca na to, że dany obiekt lub wartość są opcjonalne i mogą zwracać "nullable types".
 
 # 4. Wskaż różnicę pomiędzy strukturą, a klasą.
 
-Domyślnie pola klas są prywatne, a stuktury publiczne.
+Pola klas są prywatne, a pola stuktur są publiczne.

@@ -8,21 +8,29 @@ void output(Mail mail) {
     std::cout << "Content: " << mail.content << std::endl;
 };
 
-void input(Mail &mail) {
-    std::string attributes[4];
+std::string input_check(std::string message, std::string attribute) {
     std::string a;
-    for (int i = 0; i < sizeof(attributes)/sizeof(attributes[0]); i++) {
-        std::cin >> a;
-        attributes[i] = a;
+    std::cout << message;
+    std::getline(std::cin, a);
+    if (a == "") {
+        a = attribute;
     };
-    mail.receiver = attributes[0];
-    mail.sender = attributes[1];
-    mail.topic = attributes[2];
-    mail.content = attributes[3];
+    return a;
+};
+
+void input(Mail &mail) {
+    std::string receiver = input_check("Enter receiver: ", mail.receiver);
+    mail.receiver = receiver;
+    std::string sender = input_check("Enter sender: ", mail.sender);
+    mail.sender = sender;
+    std::string topic = input_check("Enter topic: ", mail.topic);
+    mail.topic = topic;
+    std::string content = input_check("Enter content: ", mail.content);
+    mail.content = content;
 };
 
 int main() {
-    Mail Mail_1("Patryk", "Patryk", "Test", "Hello World!");
+    Mail Mail_1("Papryk Bujna", "Patryk Bujna", "Wiadomość testowa", "Hello World!");
     input(Mail_1);
     output(Mail_1);
     return 0;
