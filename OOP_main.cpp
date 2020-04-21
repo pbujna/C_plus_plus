@@ -1,24 +1,28 @@
 #include "OOP_mail.h"
 #include <iostream>
 
-void output(Mail mail) {
+void output(Mail mail)
+{
     std::cout << "Receiver: " << mail.receiver << std::endl;
     std::cout << "Sender: " << mail.sender << std::endl;
     std::cout << "Topic: " << mail.topic << std::endl;
     std::cout << "Content: " << mail.content << std::endl;
-};
+}
 
-std::string input_check(std::string message, std::string attribute) {
+std::string input_check(std::string message, std::string attribute)
+{
     std::string a;
     std::cout << message;
     std::getline(std::cin, a);
-    if (a == "") {
+    if (a == "")
+    {
         a = attribute;
     };
     return a;
-};
+}
 
-void input(Mail &mail) {
+void input(Mail &mail)
+{
     std::string receiver = input_check("Enter receiver: ", mail.receiver);
     mail.receiver = receiver;
     std::string sender = input_check("Enter sender: ", mail.sender);
@@ -27,11 +31,4 @@ void input(Mail &mail) {
     mail.topic = topic;
     std::string content = input_check("Enter content: ", mail.content);
     mail.content = content;
-};
-
-int main() {
-    Mail Mail_1("Papryk Bujna", "Patryk Bujna", "Wiadomość testowa", "Hello World!");
-    input(Mail_1);
-    output(Mail_1);
-    return 0;
-};
+}
