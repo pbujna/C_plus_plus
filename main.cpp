@@ -1,7 +1,4 @@
-#include <iostream>
-#include "OOP_mail.h"
-#include "OOP_mail.h"
-#include "Pointers.cpp"
+#include "point2.h"
 
 int main()
 {
@@ -14,4 +11,12 @@ int main()
     //     std::cout << array[i] << std::endl;
     // }
     // return 0;
+    //
+    // Lab_5.cpp
+    point2 p2;
+    point3 p3;
+    p2.showValues();
+    p3.inputValues();
+    p2.project(p3);
+    p2.showValues();
 }
