@@ -13,4 +13,4 @@
 # 3. Czy możemy dziedziczyć konstruktory?
 
 W pierwszych wersjach C++ nie można było dziedziczyć konstruktorów. Rozwiązanie problemu pojawiło się w C++11. 
-Dziedzieczone są wszystkie konstruktory danej klasy.
+Dziedziczone są wszystkie konstruktory danej klasy.
